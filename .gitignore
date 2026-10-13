@@ -1,0 +1,84 @@
+# Environment files: never commit live credentials.
+.env
+.env.*
+!.env.example
+!.env.sample
+.envrc
+
+# Credential stores and private key material.
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+id_rsa*
+id_ed25519*
+credentials.json
+credentials*.json
+service-account*.json
+client_secret*.json
+secrets.json
+secrets.yaml
+secrets.yml
+secrets.toml
+.netrc
+.npmrc
+.pypirc
+.aws/
+.azure/
+.gcloud/
+.ssh/
+.config/
+credentials/
+secrets/
+
+# Local agent/session data and transcripts.
+.manus/
+.manus-jobs/
+.claude/
+.codex/
+.agent/
+local/
+private/
+transcripts/
+*.local
+*.local.*
+
+# Python environments, caches, and coverage.
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Generated local test observations; fixtures remain versioned.
+tests/stress/evidence/
+artifacts/
+outputs/
+dist/
+build/
+*.log
+*.tmp
+*.bak
+*.zip
+*.skill
+node_modules/
+
+# Editors and operating systems.
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Ignore rules are not secret scanning and do not untrack existing files.
+# Any .env.example/.env.sample must contain placeholders only.
